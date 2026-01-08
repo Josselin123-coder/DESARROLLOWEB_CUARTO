@@ -1,0 +1,63 @@
+/* Fondo general */
+body {
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Botón Agregar Imagen (verde personalizado) */
+.btn-agregar {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  transition: transform 0.2s;
+}
+.btn-agregar:hover {
+  transform: scale(1.05);
+  background-color: #21867a;
+}
+
+/* Botón Eliminar Imagen (naranja) */
+.btn-eliminar {
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  transition: transform 0.2s;
+}
+.btn-eliminar:hover {
+  transform: scale(1.05);
+  background-color: #e76f51;
+}
+
+/* Galería con grid */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Imágenes */
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: aparecer 0.3s ease;
+}
+
+/* Hover */
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen seleccionada */
+.galeria img.seleccionada {
+  border: 4px solid #ff6b6b;
+  box-shadow: 0 0 12px rgba(255, 107, 107, 0.7);
+}
+
+/* Animación al agregar */
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
