@@ -1,0 +1,87 @@
+/* Colores personalizados */
+:root {
+  --chocolate: #6f4e37;
+  --chocolate-light: #a9746e;
+  --chocolate-dark: #3e2f1c;
+}
+
+/* Colores para usar en clases */
+.bg-chocolate {
+  background-color: var(--chocolate) !important;
+}
+
+.text-chocolate {
+  color: var(--chocolate) !important;
+}
+
+.btn-chocolate {
+  background-color: var(--chocolate);
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-chocolate:hover,
+.btn-chocolate:focus {
+  background-color: var(--chocolate-dark);
+  color: #fff;
+}
+
+/* Botón con borde para outline */
+.btn-outline-chocolate {
+  color: var(--chocolate);
+  border: 1.5px solid var(--chocolate);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-chocolate:hover,
+.btn-outline-chocolate:focus {
+  background-color: var(--chocolate);
+  color: #fff;
+}
+
+/* Carousel imagenes */
+.carrusel-img {
+  max-height: 500px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Botón flotante de WhatsApp */
+/* --- Botón flotante de WhatsApp con animación --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: floatUpDown 3s ease-in-out infinite;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+  color: white;
+}
+
+/* Animación para subir y bajar */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
