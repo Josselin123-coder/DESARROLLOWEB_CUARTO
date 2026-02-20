@@ -1,18 +1,28 @@
-from flask import Flask
+from flask import Flask, render_template
 
-# Crea una instancia de la aplicación Flask
 app = Flask(__name__)
 
-# Define la ruta principal
 @app.route('/')
 def index():
-    return '¡Hola! Bienvenido a mi aplicación Flask.'
+    return render_template('index.html')
 
-# Define una ruta que acepta un parámetro de usuario
-@app.route('/usuario/<nombre>')
-def usuario(nombre):
-    return f'Bienvenido, {nombre}!'
+@app.route('/reservas')
+def reservas():
+    return render_template('reserva.html', cliente="Invitado")
 
-# Ejecuta la aplicación en modo de depuración
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contactos')
+def contactos():
+    return render_template('contactos.html')
+
+@app.route('/servicios')
+def servicios():
+    return render_template('servicios.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

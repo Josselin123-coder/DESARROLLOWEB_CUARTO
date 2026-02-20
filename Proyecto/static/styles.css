@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #1E90FF, #00BFFF);
+    color: white;
+    padding: 1.5rem;
+}
+
+.header-left {
+    text-align: left;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header-left p {
+    margin: 0.3rem 0 0;
+    font-size: 1rem;
+    color: #f0f8ff;
+}
+
+/* Menú de navegación alineado a la izquierda */
+.header-right nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* alinea a la izquierda */
+}
+
+.header-right nav ul li {
+    margin-right: 1rem; /* espacio entre enlaces */
+}
+
+.header-right nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+.header-right nav ul li a:hover {
+    background-color: #4682B4;
+}
+
+/* Contenido */
+/* Contenido */
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0;          /* elimina el centrado automático */
+    text-align: left;   /* fuerza alineación a la izquierda */
+}
+
+
+/* Intro en index */
+.intro {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 1.5rem;
+}
+
+.intro ul {
+    list-style: none;
+    padding: 0;
+}
+
+.intro ul li {
+    margin: 0.5rem 0;
+}
+
+.intro ul li a {
+    color: #1E90FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.intro ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Formulario de reservas */
+form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #00BFFF;
+}
+
+/* Footer alineado a la izquierda */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: left; /* alinea el texto a la izquierda */
+}

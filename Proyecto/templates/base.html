@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Sistema de Reservas{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-left">
+            <h1>Sistema de Reservas</h1>
+            <p>Gestiona tus reservas de manera rápida y sencilla.</p>
+        </div>
+      <div class="header-right">
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('about') }}">Acerca de</a></li>
+            <li><a href="{{ url_for('contactos') }}">Contactos</a></li>
+            <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+           <li><a href="{{ url_for('reservas') }}">Reservas</a></li>
+
+        </ul>
+    </nav>
+</div>
+
+    </header>
+
+    <!-- Contenido dinámico -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Sistema de Reservas - Tu tiempo, nuestra prioridad</p>
+    </footer>
+</body>
+</html>
